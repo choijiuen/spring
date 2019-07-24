@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+	
+	<bean name="/index.bit" class="com.bit.controller.IndexController"></bean>	<!-- 이걸로 URL 매핑하는 거다 
+																			/ 만하면 처음 URL로 , 바로 컨트롤러 작동한다.
+																			bean name에는 꼭 첨에 / 붙어야한다.  -->
+	
+</beans>
