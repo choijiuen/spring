@@ -8,5 +8,16 @@
 	<bean name="/index.bit" class="com.bit.controller.IndexController"></bean>	<!-- 이걸로 URL 매핑하는 거다 
 																			/ 만하면 처음 URL로 , 바로 컨트롤러 작동한다.
 																			bean name에는 꼭 첨에 / 붙어야한다.  -->
+		
+		
+	<bean name="/main.bit" class="com.bit.controller.MainController">
+		<property name="msg" value="123abc"></property>	<!-- setter를 이용한 필드 주입 -->
+	</bean>
+																				
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">	<!-- bean은 하나의 클래스와 같다 ,
+																					클래스를 호출해주는거니깐, 그리고 이걸 계속 쓴다 : 싱글턴 -->
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property> 	<!-- setter를 이용한 필드 주입 -->
+	</bean>
 	
 </beans>
