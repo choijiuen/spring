@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="dao" class="com.bit.day02.model.Day02Dao"></bean>
+	
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+	<bean name="/index.bit" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="index"></property>
+	</bean>
+	<bean name="/bbs/list.bit" class="com.bit.day02.controller.ListController">
+		<property name="dao" ref="dao"></property>	<!-- 뒤에 다오는 위에 <bean id="dao" class="com.bit.day02.model.Day02Dao"></bean> , 앞은 setter dao -->
+	</bean>
+	<bean name="/bbs/add.bit" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="add"></property>
+	</bean>
+	<bean name="/bbs/insert.bit" class="com.bit.day02.controller.InsertController">
+		<property name="dao" ref="dao"></property>	<!-- 뒤에 다오는 위에 <bean id="dao" class="com.bit.day02.model.Day02Dao"></bean> , 앞은 setter dao -->
+	</bean>
+	
+	<bean name="/bbs/detail.bit" class="com.bit.day02.controller.DetailController">
+		<property name="dao" ref="dao"></property>
+	</bean>
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">	<!--여기서 프리픽스 , 서픽스 정해줘야함 -->
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+</beans>
