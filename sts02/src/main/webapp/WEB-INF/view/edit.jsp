@@ -8,19 +8,9 @@
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
 <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript">
-	function deleteData(){
-		$.post('delete.bit',{idx:${bean.num}},function(){		//삭제할 글 번호값
-			window.location.href="list.bit"	;
-			
-			});
-		}
-</script>
 <title>Insert title here</title>
 </head>
 <body>
-
-
 
 	<div class="container">
 		<div class="row">
@@ -38,34 +28,35 @@
 			</div>
 			<div class="col-md-8">
 			
-				<form class="form-horizontal" action="insert.bit" method="post">
+				<form class="form-horizontal" action="update.bit" method="post">
+					<input type="hidden" name="num" value="${bean.num }"/>
 					  <div class="form-group">
 					    <label for="sub" class="col-sm-2 control-label">제목</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="sub" id="sub" value="${bean.sub }" readonly="readonly">
+					      <input type="text" class="form-control" name="sub" id="sub" value="${bean.sub }" >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="name" class="col-sm-2 control-label">글쓴이</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="name" id="name" placeholder="name" value="${bean.name }" readonly="readonly">
+					      <input type="text" class="form-control" name="name" id="name" placeholder="name" value="${bean.name }" readonly="readonly" >
 					    </div>
 					  </div>
 					  <div class="form-group">
 					  
 					    <div class="col-sm-offset-2 col-sm-10">
-					  	   	<textarea name="content" class="form-control" readonly="readonly">${bean.content }</textarea>
+					  	   	<textarea name="content" class="form-control" >${bean.content }</textarea>
 					   </div>
 					  </div>
 					  
 					  <div class="form-group">
 					    <div class="col-sm-offset-2 col-sm-5">
-					      <a href="edit.bit?idx=${bean.num }" role="button" class="btn btn-primary btn-block">수정</a>
+					      <button type="submit" class="btn btn-primary btn-block">수정</button>
 					   
 					    </div>
 					    <div class="col-sm-5">
 					  
-					      <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal">삭제</button>
+					      <button type="reset" class="btn btn-danger btn-block">취소</button>
 					    </div>
 					  </div>
 				</form>
@@ -73,24 +64,6 @@
 		</div>
 	</div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">주의</h4>
-      </div>
-      <div class="modal-body">
-       삭제하시겠습니까?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-        <button type="button" class="btn btn-danger" onclick="deleteData();">삭제</button>
-      </div>
-    </div>
-  </div>
-</div>
 	
 </body>
 </html>

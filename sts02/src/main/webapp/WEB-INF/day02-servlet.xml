@@ -21,6 +21,17 @@
 	
 	<bean name="/bbs/detail.bit" class="com.bit.day02.controller.DetailController">
 		<property name="dao" ref="dao"></property>
+		<property name="viewName" value="detail"> </property>
+	</bean> 
+	<bean name="/bbs/edit.bit" class="com.bit.day02.controller.DetailController">
+		<property name="dao" ref="dao"></property>
+		<property name="viewName" value="edit"></property>
+	</bean>
+	<bean name="/bbs/update.bit" class="com.bit.day02.controller.UpdateController">
+		<property name="dao" ref="dao"></property>
+	</bean>
+	<bean name="/bbs/delete.bit" class="com.bit.day02.controller.DeleteController">
+		<property name="dao" ref="dao"></property>		<!-- dao에서 메서드 만든다음 dao 주입해주기  -->
 	</bean>
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">	<!--여기서 프리픽스 , 서픽스 정해줘야함 -->
