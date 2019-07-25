@@ -9,9 +9,11 @@
 <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	function deleteData(){
+
+function deleteData(){
+		
 		$.post('delete.bit',{idx:${bean.num}},function(){		//삭제할 글 번호값
-			window.location.href="list.bit"	;
+			window.location.href="list.bit"	;					//el은 실행시점이 백엔드 , el을 파라미터 받을 때 쓰는 이유 ,이미 같이 받아진 상태다 
 			
 			});
 		}
@@ -65,7 +67,7 @@
 					    </div>
 					    <div class="col-sm-5">
 					  
-					      <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal">삭제</button>
+					      <button type="button" class="btn btn-danger btn-block">삭제</button>
 					    </div>
 					  </div>
 				</form>
