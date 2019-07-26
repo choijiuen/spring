@@ -16,39 +16,34 @@
   <p>...</p>
   <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 </div>
-
 <div class="container">
   <div class="row">
-    ...
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-</div>
-<div class="row">
-  <div class="col-md-8">.col-md-8</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-6">.col-md-6</div>
-  <div class="col-md-6">.col-md-6</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-8">.col-md-8</div>
+	  <div class="col-md-4">.col-md-4</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-4">.col-md-4</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-6">.col-md-6</div>
+	  <div class="col-md-6">.col-md-6</div>
+	</div>
 </div>
 </body>
 </html>
