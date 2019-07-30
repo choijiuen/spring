@@ -17,11 +17,12 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
-<!-- <bean id="day02Dao"
+	<!--	
+ <bean id="day02Dao"
 	class="com.bit.day05.model.entity.Day02DaoImpl">
 		<property name="jdbctemplate" ref="jdbcTemplate"></property>
 	</bean> 
-	
+
 	DaoImpl에서 Autowired해줘서 이거 없애줘야 한다 
 	-->	
 </beans>

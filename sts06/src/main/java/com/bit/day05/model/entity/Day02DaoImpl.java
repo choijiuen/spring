@@ -39,13 +39,22 @@ public class Day02DaoImpl implements Day02Dao{
 	@Override
 	public Day02Vo selectOne(int num) {
 		String sql ="select * from day02 where num=?";
-		return null;
+		return jdbctemplate.queryForObject(sql, new RowMapper<Day02Vo>() {
+
+			@Override
+			public Day02Vo mapRow(ResultSet rs, int rowNum) throws SQLException {
+				return new Day02Vo(
+						rs.getInt("num"),rs.getString("name")
+						,rs.getString("sub"),rs.getString("content")
+						,rs.getDate("nalja")
+						);
+			}},num );
 	}
 
 	@Override
 	public void insertOne(Day02Vo bean) {
 		String sql="insert into day02 (name , sub, content,nalja) values (?,?,?,now())";
-		
+		jdbctemplate.update(sql,bean.getName(), bean.getSub(), bean.getContent());
 	}
 
 	@Override
