@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bit.day09.model.Day09Dao"> <!-- 네임스페이스로 인터페이스 주소를 주고 id는 인터페이스 안에 있는 메소드다 ,이게 쿼리문 수행함 -->
+  <select id="selectAll" resultType="com.bit.day09.model.entity.Day09Vo">
+    SELECT * FROM DAY09 ORDER BY NUM 
+    
+    <if test="false">
+	    DESC
+	</if>
+  </select>
+  <insert id="insertOne" parameterType="com.bit.day09.model.entity.Day09Vo">
+  	INSERT INTO DAY09 VALUES (#{num}, #{sub}, #{nalja})
+  </insert>
+  <update id="updateOne" parameterType="com.bit.day09.model.entity.Day09Vo">
+  	UPDATE DAY09 SET SUB=#{sub} WHERE NUM=#{num}
+  </update>
+  
+  <delete id="deleteOne" parameterType="int">
+  	DELETE FROM DAY09 WHERE NUM=#{val}
+  </delete>
+</mapper>
