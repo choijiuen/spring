@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bit.tsigner.model.BbsDao">
+  <select id="selectAll" resultType="com.bit.tsigner.model.entity.BbsVo">
+    SELECT * FROM BBSTEST
+  </select>
+  
+  <insert id="insertOne" parameterType="com.bit.tsigner.model.entity.BbsVo">
+   INSERT INTO BBSTEST (sub,content,nalja) VALUES(#{sub}, #{content},now())
+  </insert>
+</mapper>
